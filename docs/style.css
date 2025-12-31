@@ -1,0 +1,204 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Main container - centers everything */
+.mainparent {
+    width: 100%;
+    max-width: 600px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* List section */
+.listdiv {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.olOne {
+    list-style-position: inside;
+    padding-left: 10px;
+    min-height: 100px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+}
+
+.olOne li {
+    padding: 10px 8px;
+    margin: 8px 0;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border-left: 4px solid #6c5ce7;
+    transition: all 0.3s ease;
+    word-wrap: break-word;
+}
+
+.olOne li:hover {
+    background-color: #f0efff;
+    transform: translateX(5px);
+}
+
+/* Input and buttons layout */
+.listdiv > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+#inputListOne {
+    flex: 1;
+    min-width: 200px;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#inputListOne:focus {
+    border-color: #6c5ce7;
+    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.1);
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 80px;
+}
+
+#listMaker {
+    background-color: #6c5ce7;
+    color: white;
+}
+
+#listMaker:hover {
+    background-color: #5a4fcf;
+    transform: translateY(-2px);
+}
+
+#delete {
+    background-color: #ff7675;
+    color: white;
+}
+
+#delete:hover {
+    background-color: #e84393;
+    transform: translateY(-2px);
+}
+
+/* Hint text */
+p {
+    font-size: 14px;
+    color: #636e72;
+    line-height: 1.6;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+/* Responsive adjustments for phones */
+@media (max-width: 480px) {
+    .mainparent {
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    #inputListOne {
+        min-width: 100%;
+    }
+
+    button {
+        flex: 1;
+        padding: 14px;
+    }
+
+    .listdiv > div {
+        flex-direction: column;
+    }
+
+    .olOne {
+        padding: 12px;
+        font-size: 15px;
+    }
+}
+
+/* Optional: Add a nice title (you can add <h1>To-Do List</h1> in HTML if you want) */
+.mainparent::before {
+    content: "My To-Do List";
+    font-size: 28px;
+    font-weight: 700;
+    color: #2d3436;
+    text-align: center;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Force li + button into same row */
+.olOne {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    row-gap: 10px;
+    column-gap: 10px;
+    align-items: center;
+}
+
+/* List item styling (task text) */
+.olOne li {
+    margin: 0;
+    width: 100%;
+}
+
+/* X button styling */
+.olOne > button {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    border: none;
+    background: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Optional hover effect */
+.olOne > button:hover {
+    transform: scale(1.2);
+}
+input {
+    white-space: pre;
+    font-family: monospace;
+}
