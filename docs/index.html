@@ -6,21 +6,20 @@
     <title>page1</title>
     <!-- <script defer src="../Backend/server.js"></script> -->
     <script src="tinymce/tinymce.min.js"></script>
-<!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="styleTest.css">
 </head>
 <body>
-    <div class="mainparent" id="parentDiv">
-        <div class="listdiv" id="childDiv">
-            <h1>To Do List Maker</h1>
-            <ol class="olOne" id="olist"></ol>
-            <textarea name="" id="textInput" 
-            placeholder="Type Here" 
-            style="width: 600px; height: 100px;"></textarea><br>
-            <button id="addBtn">Add</button>
-            <button id="deleteBtn">Delete</button>
-            <button id="saveBtn">Save and Continue</button>
-        </div>
-    </div>
+    <div class="notes-container" id="olist"></div>
+
+<div class="editor-container">
+  <div class="editor-buttons">
+    <button id="addBtn">Add</button>
+    <button id="deleteBtn">Delete</button>
+    <button id="saveBtn">Save</button>
+  </div>
+  <textarea id="textInput"></textarea>
+</div>
+
 
     <script src="script.js" defer></script>
     </body>
