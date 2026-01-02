@@ -80,10 +80,14 @@ tinymce.init({
   ` ,
 
   plugins: ['lists', 'code'],
-  toolbar: 'bold italic | bullist numlist | code',
+  toolbar: 'undo redo |' +
+    'bold italic underline strikethrough | forecolor backcolor | ' +
+    'alignleft aligncenter alignright alignjustify | ' +
+    'bullist numlist | ' +
+    'link image media table | ',
 
   menubar: false,
-  branding: false
+  branding: true
 });
 
 
